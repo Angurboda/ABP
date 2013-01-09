@@ -1,0 +1,46 @@
+----------------------------------------------------------------------------------------------------------------------------------
+-- testbench
+----------------------------------------------------------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+entity tb_simple_fir is
+end entity tb_simple_fir;
+architecture test of tb_simple_fir is
+    -- component generics
+    constant lp_taps : integer_vector := ( 1, 1, 1, 1, 1);
+    constant hp_taps : integer_vector := (-1, 0, 1);
+
+    constant samples : integer_vector := (0,0,0,0,1,1,1,1,1);
+
+    signal sample   : integer;
+    signal filtered : integer;
+    signal Clk : std_logic := '1';
+    signal finished : std_logic;
+begin  -- architecture test
+    DUT: entity work.simple_fir
+        generic map (taps => lp_taps)  -- try other taps in here
+        port map (
+            clk      => clk,
+            sample   => sample,
+            filtered => filtered);
+
+    -- waveform generation
+    WaveGen_Proc: process
+    begin
+        finished <= '0';
+        for i in samples'range loop
+            sample <= samples(i);
+            wait until rising_edge(clk);
+        end loop;
+        -- allow pipeline to empty - input will stay constant
+        for i in 0 to 5 loop
+            wait until rising_edge(clk);
+        end loop;
+        finished <= '1';
+        report (time'image(now) & " Finished");
+        wait;
+    end process WaveGen_Proc;
+
+    -- clock generation
+    Clk <= not Clk after 10 ns when finished /= '1' else '0';
+end architecture test;

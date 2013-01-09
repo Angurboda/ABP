@@ -1,0 +1,6 @@
+   text	   data	    bss	    dec	    hex	filename
+<<<<<<< .mine
+  41340	    388	   2256	  43984	   abd0	audio.elf
+=======
+  41336	    388	   2252	  43976	   abc8	audio.elf
+>>>>>>> .r5

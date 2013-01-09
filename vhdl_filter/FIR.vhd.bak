@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FIR is
+    generic (taps : integer_vector); 
+    port (
+        clk      : in  std_logic;
+        sample   : in  integer;
+        filtered : out integer := 0);
+end entity simple_fir;

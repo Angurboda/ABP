@@ -1,0 +1,17 @@
+/afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd {0 {vcom -work work -2002 -explicit -novopt /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd
+Model Technology ModelSim SE-64 vcom 6.6d Compiler 2010.11 Nov  1 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity tb_simple_fir
+-- Compiling architecture test of tb_simple_fir
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(11): (vcom-1136) Unknown identifier "integer_vector".
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(12): (vcom-1136) Unknown identifier "integer_vector".
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(14): (vcom-1136) Unknown identifier "integer_vector".
+** Error: (vcom-11) Could not find work.simple_fir.
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(21): (vcom-1195) Cannot find expanded name "work.simple_fir".
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(21): Unknown expanded name.
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(32): Attribute "range" prefix must be appropriate for an array (object or type mark).
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(32): Range of a parameter specification must be of a discrete type.
+** Error: /afs/tu-berlin.de/home/m/mathias/irb-ubuntu/abp/vhdl_filter/Testbench.vhd(47): VHDL Compiler exiting
+
+} {7.0 16.0} {}}
